@@ -1,0 +1,24 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: fortune
+spec:
+  containers:
+   - image: navkkrnair/fortune:1.0
+     name: html-generator
+     volumeMounts:
+      - name: html
+        mountPath: /var/htdocs
+   - image: nginx:alpine
+     name: web-server
+     ports:
+      - containerPort: 80
+        protocol: TCP
+     volumeMounts:
+      - name: html
+        mountPath: /usr/share/nginx/html
+        readOnly:  true
+  volumes:
+   - name: html
+     emptyDir: {}
+      
