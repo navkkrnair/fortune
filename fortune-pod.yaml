@@ -5,6 +5,7 @@ metadata:
 spec:
   containers:
    - image: navkkrnair/fortune:latest
+     imagePullPolicy: Always
      name: html-generator
      volumeMounts:
       - name: html
