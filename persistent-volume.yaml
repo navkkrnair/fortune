@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: mongodb-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+   - ReadWriteOnce
+   - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
+  gcePersistentDisk:
+    pdName: mongodb
+    fsType: ext4     
