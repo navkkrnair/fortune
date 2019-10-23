@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: gitrepo-volume
+  name: hostpath-volume
 spec:
   containers:
    - image: nginx:alpine
@@ -15,7 +15,6 @@ spec:
         readOnly:  true
   volumes:
    - name: html
-     gitRepo:
-        repository: https://github.com/navkkrnair/kubia-website-example.git
-        revision: master
-        directory: .
+     hostPath:
+       path: / 
+       
