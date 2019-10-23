@@ -1,15 +1,9 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: fortune
+  name: gitrepo-volume
 spec:
   containers:
-   - image: navkkrnair/fortune:latest
-     imagePullPolicy: Always
-     name: html-generator
-     volumeMounts:
-      - name: html
-        mountPath: /var/htdocs
    - image: nginx:alpine
      name: web-server
      ports:
@@ -21,7 +15,8 @@ spec:
         readOnly:  true
   volumes:
    - name: html
-     #emptyDir: {}
-     emptyDir:
-        medium: Memory
+     gitRepo:
+        repository: 
+        revision: master
+        directory: .
       
