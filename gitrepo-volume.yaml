@@ -19,4 +19,3 @@ spec:
         repository: https://github.com/navkkrnair/kubia-website-example.git
         revision: master
         directory: .
-      
