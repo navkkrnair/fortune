@@ -4,7 +4,7 @@ metadata:
   name: fortune
 spec:
   containers:
-   - image: navkkrnair/fortune:1.0
+   - image: navkkrnair/fortune:latest
      name: html-generator
      volumeMounts:
       - name: html
