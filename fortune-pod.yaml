@@ -1,0 +1,7 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: fortune-pod
+spec:
+   containers:
+    - image:   
