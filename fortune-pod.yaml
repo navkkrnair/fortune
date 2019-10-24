@@ -4,14 +4,6 @@ metadata:
   name: fortune-pod
 spec:
    containers:
-    - image: navkkrnair/fortune:commandline
+    - image: navkkrnair/fortune:envvar
       args: ["2"] 
-      imagePullPolicy: Always
-      name: html-generator
-      volumeMounts:
-       - name: html-location
-         mountPath: /var/htdocs
-   volumes:
-     - name: html-location
-       emptyDir:
-         medium: Memory      
+      imagePullPolicy: Always  
