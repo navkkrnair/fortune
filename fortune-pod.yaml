@@ -4,4 +4,6 @@ metadata:
   name: fortune-pod
 spec:
    containers:
-    - image:   
+    - image: navkkrnair/fortune:commandline
+      command: ["/bin/bash"]
+      args: ["arg1", "arg2"]  
