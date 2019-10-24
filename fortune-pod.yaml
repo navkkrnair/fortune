@@ -4,7 +4,8 @@ metadata:
   name: fortune-pod
 spec:
    containers:
-    - image: navkkrnair/fortune:envvar
+    - name: fortune-container
+      image: navkkrnair/fortune:envvar
       env:
         - name: INTERVAL
           value: "5" 
