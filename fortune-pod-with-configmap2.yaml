@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: fortune-pod
+spec:
+   containers:
+    - name: fortune-container
+      image: navkkrnair/fortune:envvar
+      envFrom:
+       - configMapRef:
+          name: fortune-config-map
