@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: fortune-pod
+spec:
+   containers:
+    - name: fortune-container
+      image: navkkrnair/fortune:envvar
+      env:
+      - name: INTERVAL
+        valueFrom:
+         configMapKeyRef:
+           name: fortune-config-map
+           key: sleep-interval
