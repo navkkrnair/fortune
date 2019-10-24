@@ -34,4 +34,7 @@ spec:
         medium: Memory
    - name: config
      configMap:
-       name: fortune-config-map      
+       name: fortune-config-map
+       items:
+        - key: my-nginx-config.conf
+          path: gzip.conf
