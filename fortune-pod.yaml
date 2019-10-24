@@ -5,6 +5,8 @@ metadata:
 spec:
    containers:
     - image: navkkrnair/fortune:commandline
+      command:
+        - /bin/fortuneloop.sh
       args: ["2"] 
       imagePullPolicy: Always
       name: html-generator
