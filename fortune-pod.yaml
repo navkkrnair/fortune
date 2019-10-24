@@ -7,4 +7,4 @@ spec:
     - image: navkkrnair/fortune:envvar
       env:
         - name: INTERVAL
-          value: "2" 
+          value: "5" 
